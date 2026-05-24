@@ -36,7 +36,7 @@ class FileOrganizerAgentTests(unittest.TestCase):
             self.assertFalse(sample.exists())
             self.assertTrue((folder / "code" / "script.py").exists())
 
-    def test_classifier_fallback_to_rule_based_when_llm_returns_invalid_category(self) -> None:
+    def test_classifier_falls_back_to_rule_based_on_invalid_llm_category(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             folder = Path(temp_dir)
             sample = folder / "image.jpg"
