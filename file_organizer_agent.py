@@ -175,10 +175,10 @@ def classify_with_ollama(
     endpoint: str = "http://localhost:11434/api/generate",
 ) -> str:
     prompt = (
-        "You are a file organization agent.\\n"
+        "You are a file organization agent.\n"
         "Classify this file into one category: "
-        "images, docs, videos, audio, code, archives, others.\\n\\n"
-        f"File name: {filename}\\n\\n"
+        "images, docs, videos, audio, code, archives, others.\n\n"
+        f"File name: {filename}\n\n"
         "Return only one word."
     )
 
